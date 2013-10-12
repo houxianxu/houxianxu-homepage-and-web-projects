@@ -1,0 +1,255 @@
+/*
+
+	HOUXIANXU'S WEBSITE by XIANXU HOU
+	VERSION 1.0
+
+
+*/
+
+@import url(reset.css);  /*RESET CSS */
+
+/* SELF-CLEARING FLOATS
+---------------------------------------------------------------------- */
+.clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* 1.BODY
+---------------------------------------------------------------------- */
+
+body { 
+	background:#EEEEEE url(../images/grid.png) ;
+	color:#000; 
+	font-family:Georgia,serif;  
+	line-height: 25px; 
+}
+
+
+/* 2.DEFAULT STYLING
+---------------------------------------------------------------------- */
+
+p,ul,dl,ol { 
+	margin-bottom:18px; 
+}
+
+ul { 
+	list-style:square; 
+}
+ul li { 
+	margin-left:15px; 
+}
+ol { 
+	list-style:decimal; 
+}
+ol li { 
+	margin-left:30px; 
+}
+
+hr { 
+	height:0; 
+	border:none; 
+	background:none; 
+	border-top:1px dotted #ccc; 
+}
+
+blockquote { 
+	font-family:"Palatino-Roman","Palatino","PalatinoLinotype-Roman","Palatino Linotype",Times,sans-serif; 
+	font-style:italic; 
+	font-size:14px; 
+	line-height:24px; 
+}
+blockquote p { 
+	margin-bottom:12px; 
+}
+blockquote cite { 
+	font-size:11px; color:#333; 
+	text-transform:uppercase; 
+	letter-spacing:1px; color:#666; 
+}
+
+abbr { 
+	border-bottom:1px dotted #ccc; 
+	cursor:help; 
+}
+del { 
+	color:#666; 
+}
+strong { 
+	font-weight:bold; 
+}
+em { 
+	font-style:italic; 
+}
+
+table { 
+	border-top:1px solid #ccc; 
+}
+table a { 
+	color:#000; 
+}
+table a:hover,
+table a:focus { 
+	color:#000; text-decoration:underline; 
+}
+table td { 
+	border-bottom:1px solid #ccc; 
+	background:#f4f6de; 
+	padding:5px 0; 
+}
+table tr.alt td { 
+	background:#fff; 
+}
+
+
+
+/* LAYOUT
+--------------------------------------------------------------------- */
+div.page { 
+	width:960px;
+	margin:0 auto;
+}
+
+
+
+.box_radius_shadow {
+	
+	border: 5px solid #fff;
+	border-radius: 5px;
+	-moz-webkit-border-radius: 5px;
+	-o-webkit-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 1px 1px 5px #999;
+	moz-box-shadow: 1px 1px 5px #999;
+	-webkit-box-shadow: 1px 1px 5px;
+}
+
+
+
+
+
+
+/* HEADER
+--------------------------------------------------------------------- */
+div.header {
+	margin: 20px 0 40px;
+	background-color: #fff;
+}
+
+.header h1 {
+	float: left;
+}
+.header h1 a {
+	display: block;
+	opacity: 0.8;
+}
+.header h1 a:hover,
+.header h1 a:focus {
+	opacity: 1;
+}
+
+.header .nav {
+	float: right;
+	height: 54px;
+}
+.header .nav ul {
+	margin: 18px;
+	list-style: none;
+}
+.header .nav ul li {
+	float: left;
+	padding-left: 1.5em;
+	display: block;
+}
+.header .nav ul li a{
+	color: #666;
+	font-size: 1.2em;
+	text-decoration: none;
+	padding: 0.3em;
+	border-radius: 5px;
+	background-color: #D6D2D2;
+}
+.header .nav ul li a:hover,
+.header .nav ul li a:focus{
+	color: #000;
+	background-color: #C7C3C3;
+}
+.header .nav ul li.home {
+	background: url(../images/home_logo.gif) no-repeat left center;
+}
+
+/* .blog 
+--------------------------------------------------------------------- */
+div.blog {
+	/*width: 900px;*/
+	margin: 0 auto 53px;
+}
+
+.blog div.main {
+	float: left;
+	width: 566px;
+	padding: 20px;
+	background-color: #fff
+}
+.blog div.main a {
+	text-decoration: none;
+	color: #0101E9;
+}
+.blog div.main a:hover,
+.bolg div.main a:focus {
+	text-decoration: underline;
+	color: #FF000A;
+
+}
+
+
+
+.blog div.aside {
+	width: 250px;
+	padding: 20px;
+	background-color: #fff;
+	float: right;
+}
+.blog div.aside img {
+	opacity: 0.8;
+}
+
+.blog div.aside span img {
+	display: inline;
+	padding-right: 1em;
+}
+.blog div.aside img:hover {
+	opacity: 1;
+}
+.blog div.aside ul {
+	list-style-type: none;
+}
+.blog div.aside ul li {
+	border-bottom: 1px solid #111;
+}
+.blog div.aside li:first-child {
+	border-top: 1px solid #111;
+}
+.blog div.aside h1 {
+	font-size: 1.2em;
+	padding: 10px;
+}
+
+.blog div.aside img.profile {
+	width: 160px;
+	height: 207px;
+	margin: 0px auto 20px;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+}
+
+.footer {
+	text-align: center;
+	color: #5C5C5C;
+	text-shadow: 1px 1px 0 #eee;
+	font-size: 13px;
+}
