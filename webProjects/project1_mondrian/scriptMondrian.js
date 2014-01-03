@@ -19,7 +19,6 @@ $(document).ready(function() {
 	});
 
 
-	
 	$('.row').click(function() {
 		if (pickColor === "white") {
 			alert("Please pick a color!")

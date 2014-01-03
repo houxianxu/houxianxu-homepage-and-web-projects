@@ -363,3 +363,8 @@ div#filling_space div#row_5_box_4 {
 	height: 70px;
 	background-color: white;
 }
+
+#knowledge {
+	float: right;
+	font-size: 1.2em;
+}
