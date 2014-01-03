@@ -1,0 +1,27 @@
+/*
+
+	HOUXIANXU'S WEBSITE by XIANXU HOU
+	VERSION 1.0
+
+
+*/
+
+@import url(reset.css);  /*RESET CSS */
+
+/* SELF-CLEARING FLOATS
+---------------------------------------------------------------------- */
+.clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* 1.BODY
+---------------------------------------------------------------------- */
+
+
+p  {
+	color: red;
+}
