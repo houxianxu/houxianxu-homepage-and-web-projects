@@ -199,10 +199,13 @@ div.blog {
 	color: #0101E9;
 }
 .blog div.main a:hover,
-.bolg div.main a:focus {
+.blog div.main a:focus {
 	text-decoration: underline;
 	color: #FF000A;
 
+}
+.blog #date {
+	float: right;
 }
 
 

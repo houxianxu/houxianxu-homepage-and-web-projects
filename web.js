@@ -13,6 +13,7 @@ var app = express();
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.use(express.static('public'));
+  app.use(express.static('webProjects'));
 });
 
 app.configure('development', function(){
