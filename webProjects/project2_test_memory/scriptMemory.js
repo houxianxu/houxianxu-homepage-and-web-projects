@@ -2,7 +2,8 @@ $(document).ready(function() {
 	// globals for user interface
 	var level = 1;
 	var updateNum;
-	console.log("jlhohlfjdsljfsl;");
+	var timeRemain;
+	var numDigital = 2;
 	// define event handlers
 
 
@@ -15,6 +16,9 @@ $(document).ready(function() {
 			if (timeRemain <= 0) {
 				clearInterval(countClock); // 停止计时
 				$("#current_num").css("color", "#ffffff");
+				console.log("hou");
+				$("#input_form input.text").removeAttr("disabled");
+				$("#input_form input.text").focus();
 			} else{
 				timeRemain -= 1;
 				time_count.text(timeRemain);
@@ -22,7 +26,6 @@ $(document).ready(function() {
 		};
 		// 倒计时
 		var	countClock = setInterval(function() {countClockTimer()} , 1000);
-		
 	};
 
 
@@ -41,7 +44,7 @@ $(document).ready(function() {
 	};
 
 	var updateCurrentNum = function () {
-		var numDigital = level + 4;
+		numDigital += 2;
 		updateNum = randomNum(numDigital);
 		$("#current_num").text(updateNum);
 	};
@@ -74,8 +77,10 @@ $(document).ready(function() {
 			updateLevel();
 			updateCurrentNum();
 			$("#time_count b").text("5");
+			$("#current_num").css("color", "#000000");
 			timer();
 			$(".text").val("");
+			$("#input_form input.text").attr("disabled", "");
 				
 		} else {
 			alert("the number you put is not right!");
