@@ -3,16 +3,15 @@ $(document).ready(function() {
 	var level = 1;
 	var updateNum;
 	var timeRemain;
-	var numDigital = 2;
+	var numDigital = 4;
+	var time_count = $("#time_count b");
 	// define event handlers
 
 
 	// the timer handler
 	var timer = function() {
+		timeRemain = level + 4;
 		var countClockTimer = function () {
-			var time_count = $("#time_count b"),
-			timeRemain = Number(time_count.text());
-
 			if (timeRemain <= 0) {
 				clearInterval(countClock); // 停止计时
 				$("#current_num").css("color", "#ffffff");
@@ -25,7 +24,7 @@ $(document).ready(function() {
 			}
 		};
 		// 倒计时
-		var	countClock = setInterval(function() {countClockTimer()} , 1000);
+		var	countClock = setInterval(function() {countClockTimer()}, 1000);
 	};
 
 
@@ -76,9 +75,10 @@ $(document).ready(function() {
 		if (inputNum === updateNum) {
 			updateLevel();
 			updateCurrentNum();
-			$("#time_count b").text("5");
-			$("#current_num").css("color", "#000000");
 			timer();
+			$("#time_count b").text(timeRemain);
+			$("#current_num").css("color", "#000000");
+			
 			$(".text").val("");
 			$("#input_form input.text").attr("disabled", "");
 				
