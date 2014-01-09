@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Your memory</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="Memory.css">
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="scriptMemory.js"></script>
+</head>
+
+<body id="test_memory">
+	<div class="start_page">
+		<div id="start">
+			<h1><b>记忆力测试</b></h1>
+			<h2>你首先会看到6个随机生成的数字0-9</h2>
+			<h2>你将会有5秒的时间记住你所看到的数，并输入到相应的文本框中</h2>
+			<h2>如果您的答案正确，则将进行入下一level 随机生成的数将增加一位</h2>
+			<h2>如果您的答案不正确，测试结束！</h2>
+			<button class="start_btn">
+				Start!
+			</button>
+		</div>
+	</div>
+	<div id="container">
+		<div id="time_count">time remain: <span><b>5</b></span> seconds</div>
+		<div id="main_text">
+			<div id="current_num">
+				current number
+			</div>
+			<div id="level">Level: 1</div>
+		</div>
+		<form id="input_form">
+			<input type="text" class="text" onkeydown="this.onkeyup();" onkeyup="this.size=(this.value.length>10 ?this.value.length:10);" size="10"></input>
+			<input class="btn enter" type="submit" value="Enter"></input>
+		</form>
+		
+	</div> <!-- end of container -->
+	<div class="game_over">
+		<h1>Game over!</h1>
+		<h2>Wish you have a good day!</h2>
+		<p>-- from Hou Xianxu</p>
+	</div>
+
+</body>
+
+</html>
