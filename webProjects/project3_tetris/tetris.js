@@ -444,7 +444,8 @@ $(document).ready(function() {
 		isPlaying = true;
 		score = 0;
 		speed = 500;
-		$("#currentSpeed").text(0);
+		$("#currentSpeed").text(1);
+		$("#score").text(0);
 		blocks = new Blocks(board);
 		currentBlock = new Block(board, blocks);
 		currentBlock.drawBlock();
@@ -453,7 +454,7 @@ $(document).ready(function() {
 		
 	};
 	
-	// startGame();
+
 	window.onkeydown = function (evt) {
 		if (isPlaying) {
 			if (evt.keyCode == 37) {
