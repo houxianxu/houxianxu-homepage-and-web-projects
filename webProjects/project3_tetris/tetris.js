@@ -189,7 +189,7 @@ $(document).ready(function() {
 	Block.prototype.moveDown = function () {
 		var canDown = true;
 		// 判断是否能下落
-	
+		
 		for (var i = 0; i < this.block.length; i++) {
 
 			// 是否到底部
@@ -208,7 +208,9 @@ $(document).ready(function() {
 		// 否则能落下
 		if (canDown) {
 			// 将原来的方块变为白色
+
 			for (var i = 0; i < this.block.length; i++) {
+
 				var currentPiece = this.block[i];
 				this.board.tetrisCtx.fillStyle = "white";
 				this.board.tetrisCtx.fillRect(currentPiece.x * this.board.cellWidth + 1, currentPiece.y * this.board.cellHeight + 1, this.board.cellWidth - 1, this.board.cellHeight - 1);
@@ -218,6 +220,7 @@ $(document).ready(function() {
 			for (var i = 0; i < this.block.length; i++) {
 				var currentPiece = this.block[i];
 				currentPiece.y += 1;
+
 			}
 
 			// 下移后加上颜色
@@ -472,6 +475,7 @@ $(document).ready(function() {
 		listenHandler();
 		clearInterval(gameTimer);
 		startGame();
+
 	};
 
 	windowLoad();
