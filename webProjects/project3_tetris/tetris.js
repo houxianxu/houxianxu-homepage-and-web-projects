@@ -103,6 +103,7 @@ $(document).ready(function() {
 		}
 	};
 
+	// 定义所有方块类
 	function Blocks(board) {
 		// 定义游戏中所用到的方块组合(4个小方块)，起始位置在canvas最上面的中间位置。
 		// 第一种组合 "Z"
@@ -185,7 +186,6 @@ $(document).ready(function() {
 	};
 
 	// handler 使方块各下移动
-	
 	Block.prototype.moveDown = function () {
 		var canDown = true;
 		// 判断是否能下落
@@ -347,7 +347,7 @@ $(document).ready(function() {
 			return;
 		}
 	};
-
+	// handler 旋转方块
 	Block.prototype.rotateBlock = function() {
 			canRotate = true;
 
@@ -406,7 +406,7 @@ $(document).ready(function() {
 			}
 	};
 
-
+	// 事件处理函数
 	var listenHandler = function () {
 		$("#pause").click(function() {
 			if (! paused) {
@@ -437,24 +437,7 @@ $(document).ready(function() {
 			gameTimer = setInterval(function () {currentBlock.moveDown();}, speed);
 		});
 	};
-
-	var startGame = function () {
-		board = new Board(CELL_WIDTH, CELL_HEIGHT, BOARD_ROWS, BOARD_COLS);
-		board.createCanvas();
-		isPlaying = true;
-		score = 0;
-		speed = 500;
-		$("#currentSpeed").text(1);
-		$("#score").text(0);
-		blocks = new Blocks(board);
-		currentBlock = new Block(board, blocks);
-		currentBlock.drawBlock();
-		gameTimer = setInterval(function () {currentBlock.moveDown();}, speed);
-		paused = false;
-		
-	};
 	
-
 	window.onkeydown = function (evt) {
 		if (isPlaying) {
 			if (evt.keyCode == 37) {
@@ -471,6 +454,22 @@ $(document).ready(function() {
 			}
 		}
 	}
+
+	var startGame = function () {
+		board = new Board(CELL_WIDTH, CELL_HEIGHT, BOARD_ROWS, BOARD_COLS);
+		board.createCanvas();
+		isPlaying = true;
+		score = 0;
+		speed = 500;
+		$("#currentSpeed").text(1);
+		$("#score").text(0);
+		blocks = new Blocks(board);
+		currentBlock = new Block(board, blocks);
+		currentBlock.drawBlock();
+		gameTimer = setInterval(function () {currentBlock.moveDown();}, speed);
+		paused = false;
+		
+	};
 
 	windowLoad = function() {
 		listenHandler();
